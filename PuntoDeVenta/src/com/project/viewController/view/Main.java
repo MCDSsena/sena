@@ -83,6 +83,11 @@ public class Main extends JFrame {
 		pnlProductos.add(btnCrearProd);
 		
 		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				new EliminarProducto().setVisible(Boolean.TRUE);
+			}
+		});
 		btnEliminar.setBackground(SystemColor.controlLtHighlight);
 		pnlProductos.add(btnEliminar);
 	}
