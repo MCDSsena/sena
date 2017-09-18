@@ -8,6 +8,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.project.viewController.view.CrearProducto;
+
 public class CrearProductoTest {
 
 	@BeforeClass
@@ -27,8 +29,9 @@ public class CrearProductoTest {
 	}
 
 	@Test
-	public void testCrearProducto() {
-		fail("Not yet implemented");
+	public void testNuevoProducto() {
+		int result = CrearProducto.nuevoProducto(1, 10, 5000);
+		assertTrue(result == 50000);
 	}
 
 }

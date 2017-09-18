@@ -12,6 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class CrearProducto extends JFrame {
 
@@ -107,7 +109,17 @@ public class CrearProducto extends JFrame {
 		textField_3.setColumns(10);
 		
 		JButton btnRegistrar = new JButton("Registrar");
+		btnRegistrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				nuevoProducto(1, 2, 4000);
+			}
+		});
 		btnRegistrar.setBounds(311, 114, 118, 23);
 		contentPane.add(btnRegistrar);
+	}
+	
+	public static int nuevoProducto(final int pId, final int pCant, final int pPrecio) {
+		return pCant * pPrecio;
+		
 	}
 }
